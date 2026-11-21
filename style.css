@@ -1,0 +1,434 @@
+:root {
+    --page-bg: #f3f4f6;
+    --page-text: #111827;
+    --hero-bg: url("obrazky/hellnah.jpg");
+    --menu-title-color: #ff8c00;
+    --menu-title-shadow: 2px 2px 4px rgba(0, 0, 0, 0.85);
+    --menu-link-bg: rgba(255, 123, 0, 0.92);
+    --menu-link-hover: rgb(235, 45, 0);
+    --menu-link-color: #ffffff;
+    --menu-border: rgba(255, 255, 255, 0.75);
+    --content-bg: #e5e7eb;
+    --content-shadow: 0 10px 25px rgba(0, 0, 0, 0.16);
+    --card-bg: #f9fafb;
+    --subcard-bg: #ffffff;
+    --card-border: #d1d5db;
+    --img-border: #ffffff;
+    --btn-bg: #ff7b00;
+    --btn-hover: #d9480f;
+    --btn-color: #ffffff;
+    --btn-border: #111827;
+    --aside-border: #eab308;
+    --aside-title: #fef08a;
+    --aside-link-bg: rgba(31, 41, 55, 0.88);
+    --aside-link-hover: #eab308;
+    --aside-link-hover-color: #111827;
+}
+
+html[data-theme="dark"] {
+    --page-bg: #111111;
+    --page-text: #111111;
+    --hero-bg: url("scenerie3.jpg");
+    --menu-title-color: #ffffff;
+    --menu-title-shadow: 2px 2px 6px rgba(0, 0, 0, 0.95);
+    --menu-link-bg: rgba(15, 15, 15, 0.82);
+    --menu-link-hover: #ff6600;
+    --menu-link-color: #ffffff;
+    --menu-border: rgba(255, 255, 255, 0.7);
+    --content-bg: rgba(24, 24, 27, 0.92);
+    --content-shadow: 0 10px 30px rgba(255, 102, 0, 0.35);
+    --card-bg: rgba(255, 115, 0, 0.92);
+    --subcard-bg: rgba(255, 162, 77, 0.92);
+    --card-border: rgba(0, 0, 0, 0.35);
+    --img-border: #111111;
+    --btn-bg: #18181b;
+    --btn-hover: #27272a;
+    --btn-color: #ffffff;
+    --btn-border: #111111;
+    --aside-border: rgba(255, 115, 0, 0.95);
+    --aside-title: #ff9e44;
+    --aside-link-bg: rgba(24, 24, 27, 0.88);
+    --aside-link-hover: #ff6600;
+    --aside-link-hover-color: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--page-bg);
+    color: var(--page-text);
+    font-family: 'Times New Roman', Times, serif;
+    overflow-x: hidden;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Horní banner + vodorovné menu */
+.myass {
+    background-image: var(--hero-bg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px 16px 28px;
+    width: 100%;
+}
+
+.nadpis {
+    text-align: center;
+}
+
+.nadpis h1 {
+    font-size: clamp(2.4rem, 7vw, 5.5rem);
+    margin: 8px 0 4px;
+}
+
+.header {
+    font-family: 'MedievalSharp', cursive;
+    color: var(--menu-title-color);
+    text-shadow: var(--menu-title-shadow);
+    text-align: center;
+}
+
+.menicko {
+    margin: 6px 0 12px;
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+}
+
+.menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1100px;
+}
+
+.menu li a {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: clamp(1rem, 1.8vw, 1.4rem);
+    background-color: var(--menu-link-bg);
+    color: var(--menu-link-color);
+    text-decoration: none;
+    border: 2px solid var(--menu-border);
+    border-radius: 6px;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.menu li a:hover {
+    background-color: var(--menu-link-hover);
+    transform: translateY(-2px);
+}
+
+/* Hlavní obsah vždy vycentrovaný */
+.content {
+    width: min(100% - 32px, 1140px);
+    margin: 28px auto 48px;
+    padding: 18px;
+    background-color: var(--content-bg);
+    box-shadow: var(--content-shadow);
+    border-radius: 10px;
+    font-size: clamp(1rem, 1.35vw, 1.25rem);
+    line-height: 1.6;
+}
+
+.sekce-box {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin-bottom: 18px;
+}
+
+.sekce-box:last-child {
+    margin-bottom: 0;
+}
+
+.sekce-box h1 {
+    margin-top: 0;
+    margin-bottom: 14px;
+    font-size: clamp(1.5rem, 2.6vw, 2.2rem);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Horní JS panel */
+.js-topbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 14px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.theme-control {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.mode-badge,
+.js-copyright {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.js-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 14px;
+}
+
+.js-card {
+    background-color: var(--subcard-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.js-card h2 {
+    margin: 0 0 10px;
+    font-size: 1.3rem;
+}
+
+.calc-box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.calc-box label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+}
+
+.calc-box label.calc-check {
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+.calc-box input[type="number"] {
+    width: 110px;
+    padding: 5px 8px;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #4b5563;
+}
+
+.calc-result,
+.countdown-text {
+    margin: 12px 0 0;
+    font-size: 1.08rem;
+}
+
+.ds-quote {
+    margin: 0 0 12px;
+    padding: 8px 12px;
+    border-left: 4px solid #ff7b00;
+    font-style: italic;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.darksoulsnapis {
+    height: 44px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* obrazky v textu */
+.text-s-obrazkem::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.miyazaki,
+.cosplayeri,
+.youdieadchalan {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 18px;
+    border: 2px solid var(--img-border);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.22);
+}
+
+.miyazaki {
+    float: right;
+    width: 240px;
+    margin: 4px 0 14px 20px;
+}
+
+.cosplayeri {
+    float: left;
+    width: 320px;
+    margin: 4px 20px 14px 0;
+}
+
+.youdieadchalan {
+    float: right;
+    width: 280px;
+    margin: 4px 0 14px 20px;
+}
+
+/* Videa */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+}
+
+.video-grid iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border: 0;
+    border-radius: 6px;
+}
+
+/* Galerie */
+.fslightbox {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+}
+
+.fslightbox a {
+    display: block;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 2px solid var(--img-border);
+}
+
+.fslightbox img {
+    display: block;
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    transition: transform 0.25s ease;
+}
+
+.fslightbox a:hover img {
+    transform: scale(1.04);
+}
+
+/* Tlačítka */
+.tmavyrezim {
+    background-color: var(--btn-bg);
+    color: var(--btn-color);
+    border: 2px solid var(--btn-border);
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-size: 0.98rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.tmavyrezim:hover {
+    background-color: var(--btn-hover);
+}
+
+.odstavec6 p {
+    margin: 0;
+    text-align: center;
+}
+
+/* Pravý panel Sekce */
+.nabidka {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    width: 230px;
+    padding: 12px;
+    background-image: url("obrazky/bonfire.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 4px solid var(--aside-border);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+    z-index: 30;
+}
+
+.sectionsnapis {
+    margin: 0 0 8px;
+    font-size: 1.35rem;
+    font-weight: bold;
+    color: var(--aside-title);
+    text-shadow: 1px 1px 3px #000000;
+}
+
+.nabidka ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.nabidka li a {
+    display: block;
+    padding: 5px 10px;
+    font-size: 0.98rem;
+    color: #ffffff;
+    background-color: var(--aside-link-bg);
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.nabidka li a:hover {
+    background-color: var(--aside-link-hover);
+    color: var(--aside-link-hover-color);
+}
+
+@media (max-width: 1360px) {
+    .nabidka {
+        display: none;
+    }
+}
+
+@media (max-width: 650px) {
+    .content {
+        width: calc(100% - 16px);
+        margin: 14px auto 28px;
+        padding: 10px;
+    }
+
+    .sekce-box {
+        padding: 14px;
+    }
+
+    .miyazaki,
+    .cosplayeri,
+    .youdieadchalan {
+        float: none;
+        width: min(100%, 300px);
+        margin: 10px auto 14px;
+    }
+}

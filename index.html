@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="cs" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Souls</title>
+    <link rel="icon" href="obrazky/ikona.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+    <script src="https://kit.fontawesome.com/089ffdc0b0.js" crossorigin="anonymous"></script>
+    <script src="javascript/fslightbox.js"></script>
+</head>
+
+<body>
+    <header class="myass">
+        <div class="nadpis">
+            <h1 id="titulek" class="font-effect-fire">
+                Dark Souls <i class="fa-solid fa-fire-flame-curved fa-fade" aria-hidden="true"></i>
+            </h1>
+        </div>
+        <div class="header">
+            <h2 class="menicko">Menu</h2>
+        </div>
+        <nav class="menu" aria-label="Hlavní navigace">
+            <ul>
+                <li><a href="index.html">Domov</a></li>
+                <li><a href="DarkSouls1.html">Dark Souls 1</a></li>
+                <li><a href="https://cs.wikipedia.org/wiki/FromSoftware" target="_blank" rel="noopener">Herní studio</a></li>
+                <li><a href="https://games.tiscali.cz/recenze/dark-souls-recenze-57488" target="_blank" rel="noopener">Recenze</a></li>
+                <li><a href="https://store.steampowered.com/app/570940/DARK_SOULS_REMASTERED/" target="_blank" rel="noopener">Steam</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <aside class="nabidka" aria-label="Rychlá navigace po sekcích">
+        <p class="sectionsnapis">Sekce:</p>
+        <ul>
+            <li><a href="#titulek">Titul</a></li>
+            <li><a href="#js-panel">Interaktivní JS panel</a></li>
+            <li><a href="#whatisds">Co je Dark Souls</a></li>
+            <li><a href="#whatsospecial">Čím je zajímavý</a></li>
+            <li><a href="#popularity">Popularita</a></li>
+            <li><a href="#vidiojz">Videa</a></li>
+            <li><a href="#galerka">Galerie</a></li>
+        </ul>
+    </aside>
+
+    <main class="content">
+        <!-- HORNÍ PANEL SE VŠEMI JAVASCRIPT FUNKCEMI -->
+        <section class="sekce-box js-hub" id="js-panel">
+            <div class="js-topbar">
+                <div class="theme-control">
+                    <button type="button" id="theme-toggle-btn" class="tmavyrezim">Přepnout tmavý režim</button>
+                    <span id="current-mode-info" class="mode-badge">Aktuální režim: Světlý</span>
+                </div>
+                <div class="js-copyright">
+                    &copy; 2023–<span class="js-year">2026</span> Filip Balcárek — Změny vyhrazeny
+                </div>
+            </div>
+
+            <div class="js-grid">
+                <!-- 1. Kalkulačka duší (automatický výpočet při změně vstupu) -->
+                <div class="js-card">
+                    <h2>Kalkulačka duší</h2>
+                    <div class="calc-box">
+                        <label>
+                            Počet nepřátel:
+                            <input type="number" id="enemy-count" min="0" max="9999" value="10">
+                        </label>
+                        <label>
+                            Duší za nepřítele:
+                            <input type="number" id="enemy-souls" min="0" max="1000000" value="500">
+                        </label>
+                        <label class="calc-check">
+                            <input type="checkbox" id="silver-ring">
+                            Silver Serpent Ring (+20 %)
+                        </label>
+                    </div>
+                    <p id="soul-result" class="calc-result">Celkem získáš: <strong>5 000 duší</strong></p>
+                </div>
+
+                <!-- 2. Odpočet do Vánoc -->
+                <div class="js-card">
+                    <h2>Odpočet do Vánoc</h2>
+                    <p id="christmas-countdown" class="countdown-text">Načítám odpočet...</p>
+                </div>
+
+                <!-- 3. Náhodná rada ze hry (Soapstone vzkaz) -->
+                <div class="js-card">
+                    <h2>Vzkaz u ohniště (Soapstone)</h2>
+                    <blockquote id="ds-quote" class="ds-quote">„Praise the Sun! Nikdy se nevzdávej, nemrtvý.“</blockquote>
+                    <button type="button" id="new-quote-btn" class="tmavyrezim">Další rada ze hry</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="sekce-box odstavec1" id="whatisds">
+            <h1>
+                Co je <img src="obrazky/darksoulsnapis.png" class="darksoulsnapis" alt="logo Dark Souls">
+            </h1>
+            <p>
+                <strong>
+                    Dark Souls je série akčních her na hrdiny vytvořená Hidetaka Miyazaki z FromSoftware.
+                    Vydaný Bandai Namco Entertainment. Série začala vydáním Dark Souls (2011) a má
+                    dvě pokračování, Dark Souls II (2014) a Dark Souls III (2016).
+                    Dark Souls dostalo kritiku a uznání, s prvním titulem často citovaným jako jeden z největších ve videoherním průmyslu. Série je chválena i kritizována pro její vysokou obtížnost.
+                    Do roku 2022 se série prodalo přes 33 milionů kopií. Další hry FromSoftware, včetně hry Demon's
+                    Souls, Bloodborne, Sekiro a Elden Ring sdílejí několik souvisejících konceptů a jsou běžně seskupeny
+                    společně jako Soulsbornes.
+                </strong>
+            </p>
+        </section>
+
+        <section class="sekce-box odstavec2" id="whatsospecial">
+            <h1>Co je tak speciální</h1>
+            <div class="text-s-obrazkem">
+                <img src="obrazky/miyazaki.webp" class="miyazaki" alt="duchovní tvůrce Dark Souls">
+                <p>
+                    Hry se odehrávají v temném, středověkém fantasy prostředí, kde hráčská postava bojuje proti rytířům, drakům, fantomům, démonům a dalším monstrózním nebo nadpřirozeným entitám. Narůstání, ztráta a obnova duší jsou ústředním prvkem vyprávěním a hratelností her Dark Souls. Tyto hry jsou propojeny svým prostředím a zastřešujícím cyklickým vyprávěním soustředěným kolem ohně a jsou propojeny společnými tématy a prvky, včetně interakcí s fantomy a bitev s démony. Na konci každé hry mohou postavy znovu zažehnout „první plamen“ nebo jej nechat vyhasnout a opakovat volbu, kterou předtím učinili ostatní.
+                </p>
+                <p>
+                    Hry Dark Souls se hrají z pohledu třetí osoby a zaměřují se na zkoumání vzájemně propojených prostředí a zároveň bojují s nepřáteli pomocí zbraní a magie. Hráči bojují s bossy, aby postupovali příběhem, a přitom interagují s nehratelnými postavami. Protagonista každé hry Dark Souls může mít různé pohlaví, vzhled, jméno a počáteční třídu prostřednictví tvorby postavy. Hráči si mohou vybrat mezi třídami, včetně rytířů, barbarů, zlodějů a mágů. Každá třída má své vlastní výchozí vybavení a schopnosti, které lze přizpůsobit zkušenostem a možnostem hráče, jak postupují. Hráč získává duše z herních bitev, které fungují jako zkušenostní body pro zvýšení úrovně a jako měna pro nákup předmětů. Získané duše jsou obvykle úměrné obtížnosti boje s určitými nepřáteli; čím těžší je nepřítel, tím více duší hráč získá jeho porážkou.
+                </p>
+            </div>
+        </section>
+
+        <section class="sekce-box odstavec3" id="popularity">
+            <h1>Popularita</h1>
+            <p>
+                Do roku 2022 se série prodalo přes 33 milionů kopií. Ostatní hry FromSoftware, včetně Demon's Souls, Bloodborne, Sekiro a Elden Ring, sdílejí několik souvisejících konceptů a jsou běžně seskupeny jako Soulsbornes.
+            </p>
+            <div class="text-s-obrazkem">
+                <img src="obrazky/cosplayeri.jpg" class="cosplayeri" alt="skupina fanoušků převlečená za postavy z universa">
+                <p>
+                    Jedním ze základních mechanismů série je, že využívá smrt k tomu, aby hráče naučila, jak reagovat v nepřátelství
+                    prostředí, povzbuzující k opakování, učení se z minulých chyb a předchozí zkušenosti jako prostředek
+                    překonání jeho obtížnosti. Když hráči ztratí všechny své body zdraví a zemřou, ztratí své duše
+                    a jsou teleportováni zpět k ohni, kde naposledy odpočívali, který slouží jako kontrolní bod. Jedna šance je
+                    dana aby hráč získal zpět své ztracené duše v podobě krvavé skvrny, která je umístěna na místě nebo kolem něj naposledy zemřeli. Pokud hráč znovu zemře, než dosáhne své krvavé skvrny, duše jsou trvale
+                    pryč. Protože většina nepřátel se znovu objeví po smrti hráče, nebo pokud by měl hráč odpočívat u
+                    táboráku, hráč má možnost získat zpět více duší opakovanými bojovými střetnutími.
+                </p>
+            </div>
+            <div class="text-s-obrazkem">
+                <img src="obrazky/youdiedchalan.png" class="youdieadchalan" alt="fanoušek s motivem You Died">
+                <p>
+                    Oheň je druh táboráku v akční hře na hrdiny Dark Souls a jejích pokračováních, která funguje jako kontrolní bod pro
+                    postup hráčské postavy a také oživení většiny nepřátel, které hráč předtím zabil. Později
+                    ve hře a v Dark Souls II a III fungují jako warp body. Další zásadní aspekt seriálu
+                    je jeho závislost na vytrvalosti v bitvě. Provádění útoků, blokování nebo uhýbání spotřebovává výdrž, což
+                    jinak se rychle obnoví, pokud hráč stojí nebo jen prochází. Některé pohyby nemohou být
+                    provedeny, pokud hráč postrádá určitou výdrž, což ho činí zranitelným vůči útoku. Hráči musí balancovat
+                    jejich rychlost útoků proti obranným pohybům a krátká období odpočinku pro přežití obtížnějších
+                    setkání.
+                </p>
+                <p>
+                    Online interakce v Dark Souls je integrována do zážitku pro jednoho hráče. Po celých oblastech
+                    ve hře mohou hráči krátce vidět akce ostatních hráčů jako duchů ve stejné oblasti, která se může ukázat
+                    skryté průchody nebo výhybky. Když hráč zemře, může v herním světě ostatních hráčů zůstat krvavá skvrna,
+                    která když je aktivována, může zobrazit ducha, který hraje jejich poslední okamžiky, což naznačuje, jak tato osoba zemřela a
+                    potenciálně pomáhá hráči vyhnout se stejnému osudu předem. Hráči mohou zanechat vzkazy na zemi,
+                    které mohou buď pomoci ostatním hráčům tím, že jim poskytne rady a varování, nebo jim uškodí tím, že zanechá falešné rady.
+                    Hráči se mohou také zapojit do boje mezi hráči a hráčem a do kooperativní hry pomocí invaze nebo vyvolávání.
+                </p>
+            </div>
+        </section>
+
+        <section class="sekce-box odstavec4" id="vidiojz">
+            <h1>Uvítací videa</h1>
+            <div class="video-grid">
+                <iframe src="https://www.youtube.com/embed/mQZi0BBi4MA" title="YouTube video player 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/LqhtBsxAZNo" title="YouTube video player 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/ABV_7BEslX8" title="YouTube video player 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section class="sekce-box odstavec5" id="galerka">
+            <h1>Galerie</h1>
+            <div class="fslightbox">
+                <a href="fslightbox/fslightbox1.jpg" data-fslightbox="gallery" data-type="image"><img src="fslightbox/fslightbox1.jpg" alt="Galerie 1"></a>
+                <a href="fslightbox/fslightbox2.jpg" data-fslightbox="gallery" data-type="image"><img src="fslightbox/fslightbox2.jpg" alt="Galerie 2"></a>
+                <a href="fslightbox/fslightbox3.jpg" data-fslightbox="gallery" data-type="image"><img src="fslightbox/fslightbox3.jpg" alt="Galerie 3"></a>
+                <a href="fslightbox/fslightbox4.jpg" data-fslightbox="gallery" data-type="image"><img src="fslightbox/fslightbox4.jpg" alt="Galerie 4"></a>
+                <a href="fslightbox/fslightbox5.jpg" data-fslightbox="gallery" data-type="image"><img src="fslightbox/fslightbox5.jpg" alt="Galerie 5"></a>
+            </div>
+        </section>
+
+        <footer class="sekce-box odstavec6">
+            <p>&copy; 2023–<span class="js-year">2026</span> Filip Balcárek — Změny vyhrazeny</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
